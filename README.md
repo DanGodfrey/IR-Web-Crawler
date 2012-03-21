@@ -15,3 +15,9 @@ When initialized, the collection is empty; as such a similarity score of 0.0 wil
 **calculate\_similarity(text)** - Calculates the similarity score between the current collection of topic texts and "text". Stop Words are removed from "text" and it is downsized before the calculation. The "Strike a Match" algorithm proposed by [Simon White of Catalysoft](http://www.catalysoft.com/articles/StrikeAMatch.html) is used for calculating the similarity score. 
 
 The full list of stop words considered can be found in common-english-words.txt under the resources directory. 
+
+TODO:
+Make text and link extractor both work on strings.
+remove tags: <.*?>
+(<(script).*?<\/|(script)>)
+<(style).*?<\/|(style)>
