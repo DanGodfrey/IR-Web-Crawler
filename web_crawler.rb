@@ -5,6 +5,7 @@ require_relative 'text_extractor'
 
 class WebCrawler
   def initialize(url)
+    
     html = Nokogiri::HTML(open(url))
     body = html.css("body")
     LinkExtractor.new(body, url).urls # Returns an array of urls.
