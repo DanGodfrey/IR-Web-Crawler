@@ -9,12 +9,14 @@ class LinkExtractor
     root = get_root_url(url)
     puts doc
     doc.xpath("//a").each do |anchor|
-      anchor = anchor['href']
-      unless anchor.class == NilClass
-        anchor = url_cleanup(anchor)
-        anchor = prefix_domain(root, anchor)
-        clean_anchor = "http://#{anchor}"
-        unless anchor.eql?(root) then @urls << clean_anchor end
+      unless anchor['rel'] == 'nofollow'
+        anchor = anchor['href']
+        unless anchor.class == NilClass
+          anchor = url_cleanup(anchor)
+          anchor = prefix_domain(root, anchor)
+          clean_anchor = "http://#{anchor}"
+          unless anchor.eql?(root) then @urls << clean_anchor end
+        end
       end
     end
   end
