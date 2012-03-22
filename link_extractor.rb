@@ -4,7 +4,7 @@ class LinkExtractor
   def initialize(doc, url)
     @urls = []
     root = get_root_url(url)
-    puts doc
+    #puts doc
     doc.xpath("//a").each do |anchor|
       unless anchor['rel'] == 'nofollow'
         anchor = anchor['href']
