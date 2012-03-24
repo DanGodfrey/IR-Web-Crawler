@@ -1,8 +1,3 @@
-Missing Documents / Stats 
-==============================
-Collection of 1000 texts (its still running I'll push these when its done)
-Number of links traversed including those not considered similar to the chosen topic (the crawler outputs this data when it finishes running, I'll add it here when its done)
-
 CSI4107: Web Crawler 
 ==============================
 
@@ -16,6 +11,8 @@ After manually looking at the first 30 texts collected by the crawler 23/30 were
 Other Stats:
 
 after traversing the seed links, 2699 URLS had been added to the queue
+
+after retrieving 1000 texts with similarity scores > the threshold, 8050 links has been traversed and there were 1,086,009 links remaining in the queue.
 
 Ruby Modules/Classes Developed
 ------------
